@@ -14,18 +14,8 @@ This repository contains a Selenium script (`PySelTest-extended.py`) that automa
 
 First, ensure you have all the required Python packages. You can install them using `pip`:
 
-\`\`\`sh
 pip install -r requirements.txt
-\`\`\`
 
-### Requirements File
-
-Here is the content of the `requirements.txt`:
-
-\`\`\`txt
-selenium
-webdriver-manager
-\`\`\`
 
 ### ChromeDriver
 
@@ -35,16 +25,12 @@ The script uses `webdriver-manager` to automatically manage the ChromeDriver bin
 
 1. Clone this repository:
 
-\`\`\`sh
 git clone https://github.com/yourusername/selenium-automated-registration.git
 cd selenium-automated-registration
-\`\`\`
 
 2. Run the script:
 
-\`\`\`sh
 python PySelTest-extended.py
-\`\`\`
 
 ## Script Overview
 
@@ -87,12 +73,3 @@ Log files are saved in the `Logs` directory with a timestamped filename (e.g., `
 
 - Ensure that the Chrome browser is installed and updated on your machine.
 - The script is designed to be cross-platform, but it has been primarily tested on Windows. Adjustments may be needed for other operating systems.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please fork this repository and submit pull requests with any improvements or bug fixes.
-"""
