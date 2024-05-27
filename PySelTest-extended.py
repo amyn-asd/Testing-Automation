@@ -2,6 +2,8 @@ import random
 import string
 import time
 import os
+import subprocess
+import platform
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -11,6 +13,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+import sys
 
 # Function to generate a random string of lowercase letters
 def generate_random_string(length=8):
@@ -194,4 +197,15 @@ with open(report_path, "w") as report:
 # Print the result to the console
 print(f"Test Result: {result}")
 print(f"A detailed report has been generated in '{report_path}'")
-os.startfile(report_path)
+
+# Open the report
+if platform.system() == 'Darwin':  # macOS
+    subprocess.run(['open', report_path])
+elif platform.system() == 'Windows':  # Windows
+    os.startfile(report_path)
+    sys.exit()  # Ensure the script exits after opening the report
+elif platform.system() == 'Linux':  # Linux
+    subprocess.run(['xdg-open', report_path])
+else:
+    print(f"Unsupported OS: {platform.system()}")
+    sys.exit()
