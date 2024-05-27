@@ -1,19 +1,13 @@
-import random
-import string
-import time
-import os
-import subprocess
-import platform
-from datetime import datetime
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
-import sys
+import random, string, time, os, subprocess, platform, sys  # Standard libraries
+from datetime import datetime  # For timestamping reports
+from selenium import webdriver  # For web browser automation
+from selenium.webdriver.common.by import By  # For locating elements
+from selenium.webdriver.support.ui import WebDriverWait, Select  # For waiting and dropdowns
+from selenium.webdriver.support import expected_conditions as EC  # For expected conditions in waits
+from selenium.webdriver.chrome.service import Service  # For managing ChromeDriver service
+from selenium.webdriver.chrome.options import Options  # For Chrome options
+from webdriver_manager.chrome import ChromeDriverManager  # For automatic ChromeDriver management
+
 
 # Function to generate a random string of lowercase letters
 def generate_random_string(length=8):
